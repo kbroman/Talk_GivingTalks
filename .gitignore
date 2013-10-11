@@ -6,3 +6,4 @@ Figs/*.png
 .Rhistory
 .RData
 *.Rout
+*.out
