@@ -1,0 +1,1671 @@
+\documentclass[12pt]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[dvips]{graphicx}
+%\usepackage{lscape}
+\usepackage{eepic}
+\usepackage{color}
+\usepackage{wasysym} % \female \male
+\usepackage[landscape,pdftex]{geometry}
+\usepackage{fancyhdr}
+\usepackage{wasysym} % for check symbol
+
+\DeclareOption{bigsym}{\DeclareSymbolFont{largesymbols}{OMX}{psycm}{m}{n}}
+\ProcessOptions
+
+\setlength{\oddsidemargin}{-0.75in}
+\setlength{\evensidemargin}{-0.75in}
+\setlength{\topmargin}{-1in}
+\setlength{\textheight}{7.75in}
+\setlength{\textwidth}{10.5in}
+\setlength{\footskip}{0in}
+\setlength{\parindent}{0pt}
+\setlength{\rightskip}{0pt plus 1fil} % makes ragged right
+
+\renewcommand{\familydefault}{phv} % helvetica
+
+% following: color
+\definecolor{mybgcolor}{rgb}{0,0,0.3125}
+\definecolor{myyellow}{rgb}{1,1,0.4}
+\definecolor{myblue}{rgb}{0.4,0.8,1}
+\definecolor{mypink}{rgb}{1,0.4,1}
+\definecolor{myhotpink}{rgb}{1,0,0.5}
+\definecolor{mywhite}{rgb}{1,1,1}
+\definecolor{mygray}{rgb}{0.3125,0.3125,0.3125}
+
+% following: B/W
+%\definecolor{mybgcolor}{rgb}{1,1,1}
+%\definecolor{myyellow}{rgb}{0,0,0}
+%\definecolor{myblue}{rgb}{0,0,0}
+%\definecolor{mypink}{rgb}{0,0,0}
+%\definecolor{myhotpink}{rgb}{0,0,0}
+%\definecolor{mywhite}{rgb}{0,0,0}
+
+% header/footer layout
+\pagestyle{fancy}
+\lhead{} \chead{} \rhead{}
+\lfoot{} \cfoot{} \rfoot{\color{myyellow} \thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% font sizes
+\newcommand{\superlarge}{\fontsize{60}{60} \selectfont}
+\newcommand{\titlesize}{\fontsize{40}{50} \selectfont}
+\newcommand{\headsize}{\fontsize{35}{35} \selectfont}
+\newcommand{\textsize}{\fontsize{30}{35} \selectfont}
+\newcommand{\smallsize}{\fontsize{25}{30} \selectfont}
+\newcommand{\smallersize}{\fontsize{20}{25} \selectfont}
+\newcommand{\smallestsize}{\fontsize{18}{22} \selectfont}
+\newcommand{\evensmaller}{\fontsize{14}{18} \selectfont}
+\newcommand{\lod}{\text{LOD}}
+\newcommand{\bic}{\text{BIC}}
+\newcommand{\rss}{\text{RSS}}
+\newcommand{\var}{\text{var}}
+\newcommand{\M}{\text{M}}
+%\renewcommand{\log}{\text{log}}
+%\renewcommand{\max}{\text{max}}
+
+
+
+\pagecolor{mybgcolor}
+\color{mywhite}
+
+\begin{document}
+
+\thispagestyle{empty}
+
+\begin{center}
+\titlesize \color{myyellow}
+
+\vspace*{25mm}
+
+How to give a \\
+scientific presentation
+
+\color{mypink}
+\rule{10in}{1mm}
+%\vspace{-10mm}
+
+\vspace{5mm}
+
+\textsize \color{myblue}
+Karl W Broman
+\vspace{5mm}
+
+{\smallersize Department of Biostatistics \& Medical Informatics
+
+University of Wisconsin -- Madison
+\vspace{20mm}
+
+
+\verb|www.biostat.wisc.edu/~kbroman| 
+}
+
+\end{center}
+
+
+
+
+\newpage
+
+\headsize \color{myyellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+Note
+\end{minipage}
+
+\vspace{6cm} \color{mywhite} \textsize
+
+\centerline{This is {\color{mypink} not} a scientific presentation}
+
+\newpage
+
+\headsize \color{myyellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+Note
+\end{minipage}
+
+\vspace{6cm} \color{mywhite} \textsize
+
+\centerline{This is {\color{mypink} not} a scientific presentation}
+
+\vspace{3cm}
+
+\centerline{What I say is the {\color{mypink} truth}}
+
+\centerline{\color{myblue} \smallersize (but not everyone will agree)}
+
+
+
+\newpage
+
+\headsize \color{myyellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+Note
+\end{minipage}
+
+\vspace{6cm} \color{mywhite} \textsize
+
+\centerline{This is {\color{mypink} not} a scientific presentation}
+
+\vspace{3cm}
+
+\centerline{What I say is the {\color{mypink} truth}}
+
+\centerline{\color{myblue} \smallersize (but not everyone will agree)}
+
+\vspace{3cm}
+
+\centerline{This isn't a particularly good talk}
+
+
+
+\newpage
+
+\headsize \color{myyellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+Why give a talk?
+\end{minipage}
+
+\vspace{3cm} \color{mywhite} \smallsize
+
+\hfill \begin{minipage}{9.5in}
+
+\begin{itemize}
+\itemsep24pt
+\item You're compelled to
+
+\item For practice {\color{myblue} \smallersize (eventually, you'll be doing it a lot)}
+
+\item To get a job {\color{myblue} \smallersize (an indication of
+    teaching ability)}
+
+\item To tell people stuff
+
+\item To become known
+
+\item To get people to read your papers
+
+\end{itemize}
+
+\end{minipage}
+
+
+
+
+
+\newpage
+
+\headsize \color{myyellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+Basic principles
+\end{minipage}
+
+\vspace{30mm} \color{mywhite} \smallsize
+
+\hfill \begin{minipage}{9.5in}
+
+\begin{itemize}
+\itemsep18pt
+\item Know your audience {\color{myblue} \smallersize (don't {\color{mypink} over}estimate them)}
+
+\item Take it seriously {\color{myblue} \smallersize (you're being judged)}
+
+\item Keep things simple {\color{myblue} \smallersize (have one or two
+    key points)}
+
+\item Tell a story
+
+\item There are lots of ways to be good (and {\color{mypink} bad})
+
+\item Know yourself {\color{myblue} \smallersize (adopt another's style at great peril)}
+
+\item Go to lots of talks and {\color{mypink} pay attention}
+
+\item Images over text
+
+\end{itemize}
+
+\end{minipage}
+
+
+\newpage
+
+\headsize \color{myyellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+Multiple imputation
+\end{minipage}
+
+\vfill
+
+\centerline{\includegraphics{Figs/imp.pdf}}
+
+
+\newpage
+
+\headsize \color{myyellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+Multiple imputations
+\end{minipage}
+
+\vfill
+
+\centerline{\includegraphics[height=6.5in]{Figs/multiimp.png}}
+
+
+
+\newpage
+
+\headsize \color{myyellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+Imputation LOD curves
+\end{minipage}
+
+\vfill
+
+\centerline{\includegraphics{Figs/imp_lod.pdf}}
+
+
+
+\newpage
+
+\headsize \color{myyellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+More basic principles
+\end{minipage}
+
+\vspace{30mm} \color{mywhite} \smallsize
+
+\hfill \begin{minipage}{9.5in}
+
+\begin{itemize}
+\itemsep18pt
+\item Humor can be good
+
+\item Start with an application
+
+\item Nobody wants to hear the technicalities
+
+\item Give a good summary at the end
+
+\item Pay attention to your environment
+
+\item Don't bullshit; admit ignorance
+
+\item Don't go over the time limit
+
+\item The content is key
+
+\end{itemize}
+
+\end{minipage}
+
+
+
+\newpage
+
+\headsize \color{myyellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+Ways to annoy me
+\end{minipage}
+
+\vspace{30mm} \color{mywhite} \smallsize
+
+\hfill \begin{minipage}{9.5in}
+
+\begin{itemize}
+\itemsep18pt
+\item Spend a lot of time on a useless outline slide
+
+\color{myblue}
+\item Unlabeled graphs; unreadable or meaningless labels
+
+\item Use graphs/tables straight from a paper
+
+\item Use a serif font (e.g., Times)
+
+\item Include lots of unnecessary digits
+
+\item Include raw computer output
+
+\item Read the slides verbatim
+
+\item Cover everything you've ever done
+
+\end{itemize}
+
+\end{minipage}
+
+
+
+\newpage
+
+\headsize \color{myyellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+Outline
+\end{minipage}
+
+\vspace{30mm} \color{mywhite} \smallsize
+
+\hfill \begin{minipage}{9.5in}
+
+\begin{itemize}
+\itemsep18pt
+\item Background
+
+\item New method
+
+\item Simulation results
+
+\item Application
+
+\item Conclusions/future directions
+\end{itemize}
+\end{minipage}
+
+\newpage
+
+\headsize \color{myyellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+Ways to annoy me
+\end{minipage}
+
+\vspace{30mm} \color{mywhite} \smallsize
+
+\hfill \begin{minipage}{9.5in}
+
+\begin{itemize}
+\itemsep18pt
+\color{myblue}
+\item Spend a lot of time on a useless outline slide
+\color{mywhite}
+
+\item Unlabeled graphs; unreadable or meaningless labels
+
+\item Use graphs/tables straight from a paper
+
+\color{myblue}
+\item Use a serif font (e.g., Times)
+
+\item Include lots of unnecessary digits
+
+\item Include raw computer output
+
+\item Read the slides verbatim
+
+\item Cover everything you've ever done
+
+\end{itemize}
+
+\end{minipage}
+
+
+
+
+
+
+\newpage
+
+\headsize \color{myyellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+A bad figure
+\end{minipage}
+
+\vspace{30mm} \color{mywhite} \smallsize
+
+\centerline{\includegraphics[height=6in]{Figs/badfig.png}}
+
+\newpage
+
+\headsize \color{myyellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+A better figure
+\end{minipage}
+
+\vspace{30mm} \color{mywhite} \smallsize
+
+\centerline{\includegraphics{Figs/betterfig.pdf}}
+
+
+
+\newpage
+
+\headsize \color{myyellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+Ways to annoy me
+\end{minipage}
+
+\vspace{30mm} \color{mywhite} \smallsize
+
+\hfill \begin{minipage}{9.5in}
+
+\begin{itemize}
+\itemsep18pt
+\color{myblue}
+\item Spend a lot of time on a useless outline slide
+
+\item Unlabeled graphs; unreadable or meaningless labels
+
+\item Use graphs/tables straight from a paper
+\color{mywhite}
+
+\item Use a serif font (e.g., Times)
+
+\color{myblue}
+\item Include lots of unnecessary digits
+
+\item Include raw computer output
+
+\item Read the slides verbatim
+
+\item Cover everything you've ever done
+
+\end{itemize}
+
+\end{minipage}
+
+
+\newpage
+
+\headsize \color{myyellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+Ways to annoy me
+\end{minipage}
+{\rmfamily
+
+\vspace{30mm} \color{mywhite} \smallsize
+
+\hfill \begin{minipage}{9.5in}
+
+\begin{itemize}
+\itemsep18pt
+\color{myblue}
+\item Spend a lot of time on a useless outline slide
+
+\item Unlabeled graphs; unreadable or meaningless labels
+
+\item Use graphs/tables straight from a paper
+\color{mywhite}
+\item Use a serif font (e.g., Times)
+
+\color{myblue}
+\item Include lots of unnecessary digits
+
+\item Include raw computer output
+
+\item Read the slides verbatim
+
+\item Cover everything you've ever done
+
+\end{itemize}
+
+\end{minipage}
+}
+
+\newpage
+
+\headsize \color{myyellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+Ways to annoy me
+\end{minipage}
+
+\vspace{30mm} \color{mywhite} \smallsize
+
+\hfill \begin{minipage}{9.5in}
+
+\begin{itemize}
+\itemsep18pt
+\color{myblue}
+\item Spend a lot of time on a useless outline slide
+
+\item Unlabeled graphs; unreadable or meaningless labels
+
+\item Use graphs/tables straight from a paper
+
+\item Use a serif font (e.g., Times)
+
+\color{mywhite}
+
+\item Include lots of unnecessary digits
+\color{myblue}
+
+\item Include raw computer output
+
+\item Read the slides verbatim
+\item Cover everything you've ever done
+
+\end{itemize}
+
+\end{minipage}
+
+
+\newpage
+
+\headsize \color{myyellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+A bad table
+\end{minipage}
+
+\vspace{30mm} \color{mywhite} \smallsize
+
+\centerline{\includegraphics[height=6in]{Figs/paik_tab5.jpg}}
+
+
+
+\newpage
+
+\headsize \color{myyellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+Ways to annoy me
+\end{minipage}
+
+\vspace{30mm} \color{mywhite} \smallsize
+
+\hfill \begin{minipage}{9.5in}
+
+\begin{itemize}
+\itemsep18pt
+\color{myblue}
+\item Spend a lot of time on a useless outline slide
+
+\item Unlabeled graphs; unreadable or meaningless labels
+
+\item Use graphs/tables straight from a paper
+
+\item Use a serif font (e.g., Times)
+
+\item Include lots of unnecessary digits
+\color{mywhite}
+\item Include raw computer output
+\color{myblue}
+
+\item Read the slides verbatim
+
+\item Cover everything you've ever done
+
+\end{itemize}
+
+\end{minipage}
+
+
+
+
+
+\newpage
+
+\headsize \color{myyellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+Computer output{\color{mypink} ?!?}
+\end{minipage}
+
+\vspace{30mm} \color{mywhite} \smallsize
+
+\hfill \begin{minipage}{9.5in}
+
+\smallersize
+\begin{verbatim}
+> anova(aov(x ~ factor(d) * factor(sex)))
+Analysis of Variance Table
+
+Response: x
+                      Df  Sum Sq Mean Sq F value Pr(>F)    
+factor(d)              4 203.661  50.915 49.3485 <2e-16 ***
+factor(sex)            1   2.199   2.199  2.1317 0.1478    
+factor(d):factor(sex)  4   1.923   0.481  0.4660 0.7605    
+Residuals             90  92.858   1.032                   
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1 
+\end{verbatim}
+\end{minipage}
+
+
+\newpage
+
+\headsize \color{myyellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+Ways to annoy me
+\end{minipage}
+
+\vspace{30mm} \color{mywhite} \smallsize
+
+\hfill \begin{minipage}{9.5in}
+
+\begin{itemize}
+\itemsep18pt
+\color{myblue}
+\item Spend a lot of time on a useless outline slide
+
+\item Unlabeled graphs; unreadable or meaningless labels
+
+\item Use graphs/tables straight from a paper
+
+\item Use a serif font (e.g., Times)
+
+\item Include lots of unnecessary digits
+
+\item Include raw computer output
+\color{mywhite}
+
+\item Read the slides verbatim
+
+\item Cover everything you've ever done
+
+\end{itemize}
+
+\end{minipage}
+
+
+\newpage
+
+\headsize \color{myyellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+More ways to annoy me
+\end{minipage}
+
+\vspace{30mm} \color{mywhite} \smallsize
+
+\hfill \begin{minipage}{9.5in}
+
+\begin{itemize}
+\itemsep18pt
+
+\item Skip the motivation
+
+\item Mumble
+
+\item Spend a lot of time discussing simulations
+
+\item Focus on your computer rather than the audience
+
+\item Use a noisy background
+
+\item Use a canned Powerpoint background
+
+\item Include your institution's logo on every slide
+
+\item Include other useless stuff on every slide
+
+\end{itemize}
+
+\end{minipage}
+
+
+\newpage
+
+\headsize \color{myyellow}
+\hfill \begin{minipage}{6.25in}
+\centering
+Yet more ways to annoy me
+\end{minipage}
+
+\vspace{30mm} \color{mywhite} \smallsize
+
+\hfill \begin{minipage}{9.5in}
+
+\begin{itemize}
+\itemsep18pt
+
+\item Use gratuitous animations
+
+\item Flash your laser pointer around constantly 
+
+\item Make extensive references to others' work
+
+\item Write full paragraphs
+\item Spend a lot of time on technical details
+
+\item Use complicated notation that's hard to remember
+
+\item Have lots of typos
+
+\item Reveal just a bit at a time
+
+\end{itemize}
+
+\end{minipage}
+
+
+\newpage
+
+\headsize \color{myyellow}
+\hfill \begin{minipage}{6.25in}
+\centering
+Yet more ways to annoy me
+\end{minipage}
+
+\vspace{30mm} \color{mywhite} \smallsize
+
+\hfill \begin{minipage}{9.5in}
+
+\begin{itemize}
+\itemsep18pt
+
+\item Use gratuitous animations
+
+
+\end{itemize}
+
+\end{minipage}
+
+\newpage
+
+\headsize \color{myyellow}
+\hfill \begin{minipage}{6.25in}
+\centering
+Yet more ways to annoy me
+\end{minipage}
+
+\vspace{30mm} \color{mywhite} \smallsize
+
+\hfill \begin{minipage}{9.5in}
+
+\begin{itemize}
+\itemsep18pt
+
+\item Use gratuitous animations
+
+\item Flash your laser pointer around constantly 
+
+
+\end{itemize}
+
+\end{minipage}
+
+
+\newpage
+
+\headsize \color{myyellow}
+\hfill \begin{minipage}{6.25in}
+\centering
+Yet more ways to annoy me
+\end{minipage}
+
+\vspace{30mm} \color{mywhite} \smallsize
+
+\hfill \begin{minipage}{9.5in}
+
+\begin{itemize}
+\itemsep18pt
+
+\item Use gratuitous animations
+
+\item Flash your laser pointer around constantly 
+
+\item Make extensive references to others' work
+
+
+\end{itemize}
+
+\end{minipage}
+
+
+\newpage
+
+\headsize \color{myyellow}
+\hfill \begin{minipage}{6.25in}
+\centering
+Yet more ways to annoy me
+\end{minipage}
+
+\vspace{30mm} \color{mywhite} \smallsize
+
+\hfill \begin{minipage}{9.5in}
+
+\begin{itemize}
+\itemsep18pt
+
+\item Use gratuitous animations
+
+\item Flash your laser pointer around constantly 
+
+\item Make extensive references to others' work
+
+\item Write full paragraphs
+
+\end{itemize}
+
+\end{minipage}
+
+
+\newpage
+
+\headsize \color{myyellow}
+\hfill \begin{minipage}{6.25in}
+\centering
+Yet more ways to annoy me
+\end{minipage}
+
+\vspace{30mm} \color{mywhite} \smallsize
+
+\hfill \begin{minipage}{9.5in}
+
+\begin{itemize}
+\itemsep18pt
+
+\item Use gratuitous animations
+
+\item Flash your laser pointer around constantly 
+
+\item Make extensive references to others' work
+
+\item Write full paragraphs
+\item Spend a lot of time on technical details
+
+\end{itemize}
+
+\end{minipage}
+
+
+\newpage
+
+\headsize \color{myyellow}
+\hfill \begin{minipage}{6.25in}
+\centering
+Yet more ways to annoy me
+\end{minipage}
+
+\vspace{30mm} \color{mywhite} \smallsize
+
+\hfill \begin{minipage}{9.5in}
+
+\begin{itemize}
+\itemsep18pt
+
+\item Use gratuitous animations
+
+\item Flash your laser pointer around constantly 
+
+\item Make extensive references to others' work
+
+\item Write full paragraphs
+\item Spend a lot of time on technical details
+
+\item Use complicated notation that's hard to remember
+
+\end{itemize}
+
+\end{minipage}
+
+
+\newpage
+
+\headsize \color{myyellow}
+\hfill \begin{minipage}{6.25in}
+\centering
+Yet more ways to annoy me
+\end{minipage}
+
+\vspace{30mm} \color{mywhite} \smallsize
+
+\hfill \begin{minipage}{9.5in}
+
+\begin{itemize}
+\itemsep18pt
+
+\item Use gratuitous animations
+
+\item Flash your laser pointer around constantly 
+
+\item Make extensive references to others' work
+
+\item Write full paragraphs
+\item Spend a lot of time on technical details
+
+\item Use complicated notation that's hard to remember
+
+\item Have lots of typos
+
+\end{itemize}
+
+\end{minipage}
+
+
+\newpage
+
+\headsize \color{myyellow}
+\hfill \begin{minipage}{6.25in}
+\centering
+Yet more ways to annoy me
+\end{minipage}
+
+\vspace{30mm} \color{mywhite} \smallsize
+
+\hfill \begin{minipage}{9.5in}
+
+\begin{itemize}
+\itemsep18pt
+
+\item Use gratuitous animations
+
+\item Flash your laser pointer around constantly 
+
+\item Make extensive references to others' work
+
+\item Write full paragraphs
+\item Spend a lot of time on technical details
+
+\item Use complicated notation that's hard to remember
+
+\item Have lots of typos
+
+\item Reveal just a bit at a time
+
+\end{itemize}
+
+\end{minipage}
+
+
+\newpage
+
+\headsize \color{myyellow}
+\hfill \begin{minipage}{6.25in}
+\centering
+Yet more ways to annoy me
+\end{minipage}
+
+\vspace{30mm} \color{mywhite} \smallsize
+
+\hfill \begin{minipage}{9.5in}
+
+\begin{itemize}
+\itemsep18pt
+
+\color{mywhite}
+\item Use gratuitous animations
+
+\color{myblue}
+\item Flash your laser pointer around constantly 
+
+\item Make extensive references to others' work
+
+\item Write full paragraphs
+\item Spend a lot of time on technical details
+
+\item Use complicated notation that's hard to remember
+
+\item Have lots of typos
+
+\item Reveal just a bit at a time
+
+\end{itemize}
+
+\end{minipage}
+
+\newpage
+
+\headsize \color{myyellow}
+\hfill \begin{minipage}{6.25in}
+\centering
+Yet more ways to annoy me
+\end{minipage}
+
+\vspace{30mm} \color{mywhite} \smallsize
+
+\hfill \begin{minipage}{9.5in}
+
+\begin{itemize}
+\itemsep18pt
+
+\color{myblue}
+\item Use gratuitous animations
+
+\color{mywhite}
+\item Flash your laser pointer around constantly 
+
+\color{myblue}
+\item Make extensive references to others' work
+
+\item Write full paragraphs
+\item Spend a lot of time on technical details
+
+\item Use complicated notation that's hard to remember
+
+\item Have lots of typos
+
+\item Reveal just a bit at a time
+
+\end{itemize}
+
+\end{minipage}
+
+\newpage
+
+\headsize \color{myyellow}
+\hfill \begin{minipage}{6.25in}
+\centering
+Yet more ways to annoy me
+\end{minipage}
+
+\vspace{30mm} \color{mywhite} \smallsize
+
+\hfill \begin{minipage}{9.5in}
+
+\begin{itemize}
+\itemsep18pt
+
+\color{myblue}
+\item Use gratuitous animations
+
+\item Flash your laser pointer around constantly 
+
+\color{mywhite}
+\item Make extensive references to others' work
+
+\color{myblue}
+\item Write full paragraphs
+\item Spend a lot of time on technical details
+
+\item Use complicated notation that's hard to remember
+
+\item Have lots of typos
+
+\item Reveal just a bit at a time
+
+\end{itemize}
+
+\end{minipage}
+
+\newpage
+
+\headsize \color{myyellow}
+\hfill \begin{minipage}{6.25in}
+\centering
+Yet more ways to annoy me
+\end{minipage}
+
+\vspace{30mm} \color{mywhite} \smallsize
+
+\hfill \begin{minipage}{9.5in}
+
+\begin{itemize}
+\itemsep18pt
+
+\color{myblue}
+\item Use gratuitous animations
+
+\item Flash your laser pointer around constantly 
+
+\item Make extensive references to others' work
+
+\color{mywhite}
+\item Write full paragraphs
+\color{myblue}
+\item Spend a lot of time on technical details
+
+\item Use complicated notation that's hard to remember
+
+\item Have lots of typos
+
+\item Reveal just a bit at a time
+
+\end{itemize}
+
+\end{minipage}
+
+\newpage
+
+\headsize \color{myyellow}
+\hfill \begin{minipage}{6.25in}
+\centering
+Yet more ways to annoy me
+\end{minipage}
+
+\vspace{30mm} \color{mywhite} \smallsize
+
+\hfill \begin{minipage}{9.5in}
+
+\begin{itemize}
+\itemsep18pt
+
+\color{myblue}
+\item Use gratuitous animations
+
+\item Flash your laser pointer around constantly 
+
+\item Make extensive references to others' work
+
+\item Write full paragraphs
+\color{mywhite}
+\item Spend a lot of time on technical details
+
+\color{myblue}
+\item Use complicated notation that's hard to remember
+
+\item Have lots of typos
+
+\item Reveal just a bit at a time
+
+\end{itemize}
+
+\end{minipage}
+
+\newpage
+
+\headsize \color{myyellow}
+\hfill \begin{minipage}{6.25in}
+\centering
+Yet more ways to annoy me
+\end{minipage}
+
+\vspace{30mm} \color{mywhite} \smallsize
+
+\hfill \begin{minipage}{9.5in}
+
+\begin{itemize}
+\itemsep18pt
+
+\color{myblue}
+\item Use gratuitous animations
+
+\item Flash your laser pointer around constantly 
+
+\item Make extensive references to others' work
+
+\item Write full paragraphs
+\item Spend a lot of time on technical details
+
+\color{mywhite}
+\item Use complicated notation that's hard to remember
+
+\color{myblue}
+\item Have lots of typos
+
+\item Reveal just a bit at a time
+
+\end{itemize}
+
+\end{minipage}
+
+\newpage
+
+\headsize \color{myyellow}
+\hfill \begin{minipage}{6.25in}
+\centering
+Yet more ways to annoy me
+\end{minipage}
+
+\vspace{30mm} \color{mywhite} \smallsize
+
+\hfill \begin{minipage}{9.5in}
+
+\begin{itemize}
+\itemsep18pt
+
+\color{myblue}
+\item Use gratuitous animations
+
+\item Flash your laser pointer around constantly 
+
+\item Make extensive references to others' work
+
+\item Write full paragraphs
+\item Spend a lot of time on technical details
+
+\item Use complicated notation that's hard to remember
+
+\color{mywhite}
+\item Have lots of typos
+
+\color{myblue}
+\item Reveal just a bit at a time
+
+\end{itemize}
+
+\end{minipage}
+
+\newpage
+
+\headsize \color{myyellow}
+\hfill \begin{minipage}{6.25in}
+\centering
+Yet more ways to annoy me
+\end{minipage}
+
+\vspace{30mm} \color{mywhite} \smallsize
+
+\hfill \begin{minipage}{9.5in}
+
+\begin{itemize}
+\itemsep18pt
+
+\color{myblue}
+\item Use gratuitous animations
+
+\item Flash your laser pointer around constantly 
+
+\item Make extensive references to others' work
+
+\item Write full paragraphs
+\item Spend a lot of time on technical details
+
+\item Use complicated notation that's hard to remember
+
+\item Have lots of typos
+
+\color{mywhite}
+\item Reveal just a bit at a time
+
+\end{itemize}
+
+\end{minipage}
+
+
+
+
+
+\newpage
+
+\headsize \color{myyellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+Preparing the presentation
+\end{minipage}
+
+\vspace{3cm} \color{mywhite} \smallsize
+
+\hfill \begin{minipage}{9.5in}
+
+\begin{itemize}
+\itemsep24pt
+\item What is the take-home message?
+
+\item What figures do you want to show?
+
+\item What background needs to be covered?
+
+\item Want a logical unfolding of the information
+
+\item Think carefully about the transitions
+
+\end{itemize}
+
+\end{minipage}
+
+
+
+
+
+
+
+\newpage
+
+\headsize \color{myyellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+Slides
+\end{minipage}
+
+\vspace{30mm} \color{mywhite} \smallsize
+
+\hfill \begin{minipage}{9.5in}
+
+\begin{itemize}
+\itemsep24pt
+\item Be consistent {\color{myblue} \smallersize (colors, labels, layout)}
+
+\item Polished, but not overly so
+
+\item Think carefully about colors {\color{myblue} \smallersize
+    (projector vs computer; color blindness)}
+
+\item Use care regarding graphic type {\color{myblue} \smallersize
+    (jpeg/png vs pdf/ps)}
+
+\item Design figures specifically for the talk
+
+\item Add more illustrations
+
+\item Know your slides {\color{myblue} \smallersize (don't let them
+    surprise you)}
+
+\end{itemize}
+
+\end{minipage}
+
+
+\newpage
+
+\headsize \color{myyellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+The text-free talk
+\end{minipage}
+
+\vspace{3cm} \color{mywhite} \smallsize
+
+\hfill \begin{minipage}{9.5in}
+
+\begin{itemize}
+\itemsep18pt
+\item Can you do it with only pictures?
+
+\item Wordy slides seem more for the speaker than the audience
+
+\item Consider index cards {\color{myblue} \smallersize (but don't
+    drop them)}
+\end{itemize}
+\end{minipage}
+
+
+\newpage
+
+\headsize \color{myyellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+Practice
+\end{minipage}
+
+\vspace{15mm} \color{mywhite} \smallsize
+
+\hfill \begin{minipage}{9.5in}
+
+\begin{itemize}
+\itemsep18pt
+\item Practice by giving talks {\color{myblue} \smallersize (take
+    every opportunity)}
+
+\item Don't let practice kill your enthusiasm
+
+\item Think it through carefully {\color{myblue} \smallersize (imagine what the audience is thinking)}
+
+\item Focus on the transitions and the tricky bits
+
+\item Do you know how long it will take?
+
+\item ``10 practice runs for one presentation''  {\color{mypink} (Yikes!)}
+
+\item Know what {\color{mypink} you} need
+
+\item I usually have a good idea for my ``opening''
+
+\item Videotape? {\color{mypink} (Not me!)}
+
+\end{itemize}
+
+\end{minipage}
+
+
+\newpage
+
+\headsize \color{myyellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+Delivery
+\end{minipage}
+
+\vspace{15mm} \color{mywhite} \smallsize
+
+\hfill \begin{minipage}{9.5in}
+
+\begin{itemize}
+\itemsep18pt
+\item How to dress?  {\color{myblue} \smallersize (reflects your
+    respect for the audience)}
+
+\item Exude enthusiasm and confidence
+
+\item Move around
+
+\item Look at the screen, {\color{mypink} with} the audience
+
+\item Explain fully or not at all
+
+\item Don't apologize
+
+\item Avoid getting yourself stuck; feel free to stop and summarize
+
+\item Relax; slow down; occasional silence is okay
+
+\item You want the audience to {\color{mypink} care} and
+  {\color{mypink} understand}
+
+
+\end{itemize}
+
+\end{minipage}
+
+
+\newpage
+
+\headsize \color{myyellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+Nervousness
+\end{minipage}
+
+\vspace{3cm} \color{mywhite} \smallsize
+
+\hfill \begin{minipage}{9.5in}
+
+\begin{itemize}
+\itemsep18pt
+\item Expect to be nervous {\color{myblue} \smallersize (always)}
+
+\item Be prepared
+
+\item Know your audience
+
+\item Have something to drink on hand
+
+\item It's probably not noticeable
+
+\item Use two hands with the laser pointer
+
+\item It's okay to screw up now and then {\color{myblue} \smallersize
+    (I think)}
+
+\item It's easier when you {\color{mypink} care} about what you're
+  talking about
+
+\end{itemize}
+
+\end{minipage}
+
+
+
+
+
+\newpage
+
+\headsize \color{myyellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+The 10 or 15 min talk
+\end{minipage}
+
+\vspace{3cm} \color{mywhite} \smallsize
+
+\hfill \begin{minipage}{9.5in}
+
+\begin{itemize}
+\itemsep18pt
+\item Think: what {\color{mypink} is} the goal?
+
+\item Explain the problem, sketch the solution, give a few results
+
+\item 5 -- 15 slides
+
+\item Simplify, simplify, simplify
+
+\item If possible, choose the topic to fit the time limit
+
+\end{itemize}
+
+\end{minipage}
+
+
+
+
+\newpage
+
+\headsize \color{myyellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+PDF vs Powerpoint
+\end{minipage}
+
+\vspace{3cm} \color{mywhite} \smallsize
+
+\hfill \begin{minipage}{9.5in}
+
+\begin{itemize}
+\itemsep18pt
+\item PDF always looks as expected
+
+\item Powerpoint can have terrible graph/font problems
+
+\item Powerpoint makes sharing slides easier
+
+\item Powerpoint can be easier to create
+
+\item Powerpoint: easier to have color and black/white versions
+
+\item Powerpoint's defaults are terrible
+
+\end{itemize}
+
+\end{minipage}
+
+
+
+
+\newpage
+
+\headsize \color{myyellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+Q \& A
+\end{minipage}
+
+\vspace{3cm} \color{mywhite} \smallsize
+
+\hfill \begin{minipage}{9.5in}
+
+\begin{itemize}
+\itemsep18pt
+\item Listen
+
+\item Repeat the question 
+
+\item Be gracious
+
+\item Admit ignorance
+
+\item ``I'll have to give that some thought...''
+
+\item ``I'm glad for the suggestion...''
+
+\item ``I've thought about that, but haven't yet found a solution...''
+
+\end{itemize}
+
+\end{minipage}
+
+
+
+
+\newpage
+
+\headsize \color{myyellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+Final thoughts
+\end{minipage}
+
+\vspace{3cm} \color{mywhite} \smallsize
+
+\hfill \begin{minipage}{9.5in}
+
+\begin{itemize}
+\itemsep18pt
+\setlength{\rightskip}{0pt plus 1fil} % makes ragged right
+\item You should be able to give a talk on your current work at a
+  moment's notice
+
+\item Simulation results are almost always dreadfully boring
+
+\item Not every piece of work makes a good talk
+
+\item I always empty my pockets, just in case
+
+\item I like to have an index card with slide numbers
+
+\item Know your computer; adjust the screen/energy saver times
+
+
+\end{itemize}
+
+\end{minipage}
+
+
+
+\newpage
+
+\headsize \color{myyellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+Resources
+\end{minipage}
+
+\vspace{15mm} \color{mywhite} \smallersize
+
+\hfill \begin{minipage}{10in}
+
+\begin{itemize}
+\setlength{\rightskip}{0pt plus 1fil} % makes ragged right
+\itemsep24pt
+\item M Alley (2002) The craft of scientific presentations: Critical
+  steps to succeed and critical errors to avoid.  Springer
+{\color{myblue} \smallestsize (Lots of fun stories about famous scientists)}
+
+
+\item S Morgan, B Whitener (2006) Speaking about science: A manual for
+  creating clear presentations.  Cambridge University Press 
+{\color{myblue} \smallestsize (A bit simplistic)}
+
+\item RRH Anholt (2005) Dazzle 'em with style: The art of oral
+  scientific presentation, 2nd edition.  Academic Press 
+{\color{myblue} \smallestsize (I didn't like it)}
+
+\item PB Medawar (1979) Advice to a young scientist.  BasicBooks
+
+\item RA Day, B Gastel (2006) How to write and publish a scientific
+  paper, 6th edition.  Greenwood Press
+
+
+\item PJ Feibelman (1993) A PhD is not enough!  Addison Wesley
+
+\end{itemize}
+\end{minipage}
+
+\vfill
+
+\hfill
+{\color{myblue} \smallestsize
+\verb|www.biostat.wisc.edu/~kbroman/presentations|}
+
+\vspace{15mm}
+
+\end{document}

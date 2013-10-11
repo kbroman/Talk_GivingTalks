@@ -1,0 +1,8 @@
+giving_talks.pdf
+*.aux
+*.log
+Figs/*.pdf
+Figs/*.png
+.Rhistory
+.RData
+*.Rout
