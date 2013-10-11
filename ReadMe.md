@@ -5,8 +5,6 @@ students back in October, 2010.
 
 The pdf is [here](http://www.biostat.wisc.edu/~kbroman/presentations/giving_talks.pdf).
 
-And [here's a version with notes on what I intend to say](http://www.biostat.wisc.edu/~kbroman/presentations/openaccess_withnotes.pdf).
-
 <hr/>
 
 To the extent possible under law,
